@@ -2,11 +2,18 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
   <display-name>javaee-bootstrap</display-name>
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <servlet-name>InitWebXml</servlet-name>
+    <jsp-file>/init-web-xml.jsp</jsp-file>
+    <init-param>
+      <param-name>ds_titulo</param-name>
+      <param-value>Título configurado no arquivo web.xml</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InitWebXml</servlet-name>
+    <url-pattern>/init-web-xml</url-pattern>
+  </servlet-mapping>
 </web-app>

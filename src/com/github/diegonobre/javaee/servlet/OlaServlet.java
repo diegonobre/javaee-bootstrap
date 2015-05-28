@@ -1,4 +1,4 @@
-package com.github.diegonobre.servlet;
+package com.github.diegonobre.javaee.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -25,9 +25,22 @@ public class OlaServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		/*
+		 * Como ainda não conhecemos JSP, vamos avisar ao cliente que 
+		 * a resposta vai ser no formato "text/html"
+		 */
 		response.setContentType("text/html");
+		
+		/*
+		 * Com o PrintWriter, poderemos escrever textos na resposta
+		 */
 		PrintWriter out = response.getWriter();
 		
+		/*
+		 * O valor do parâmetro e-mail, poderá ser passado para o Servlet
+		 * utilizando a url: /ola-servlet?email=seunome@email.com
+		 */
 		String email = request.getParameter("email");
 		
 		HttpSession session = request.getSession();
