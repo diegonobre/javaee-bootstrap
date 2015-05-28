@@ -7,6 +7,11 @@
 <title>Objetos JSP</title>
 </head>
 <body>
+Essa página foi criada para testar passagem de parâmetros armazenando valores em diferentes escopos de uma página JSP.
+<p>Clique no link abaixo para passar um parâmetro para essa página:</p>
+
+<a href="./objetos.jsp?email=contato@diegonobre.net">http://localhost:8080/javaee-bootstrap/objetos.jsp?email=contato@diegonobre.net</a>
+<br />
 <%
 String email = request.getParameter("email");
 

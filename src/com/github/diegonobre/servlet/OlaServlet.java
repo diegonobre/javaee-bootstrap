@@ -53,7 +53,7 @@ public class OlaServlet extends HttpServlet {
 		String email = request.getParameter("email");
 		String senha = request.getParameter("senha");
 		
-		response.getWriter().write("Olá doPost(), seu aqui está o seu email ("+email+") e senha ("+senha+")!");
+		response.getWriter().write("Olá doPost(), aqui está o parâmetro email ("+email+") e senha ("+senha+")!");
 	}
 
 }
