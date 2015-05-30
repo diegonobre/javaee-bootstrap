@@ -1,4 +1,4 @@
-<%@page import="com.github.diegonobre.javaee.dto.User"%>
+<%@ page import="com.github.diegonobre.javaee.dto.User" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -12,7 +12,7 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>JavaEE Bootstrap > github.com/diegonobre/javaee-bootstrap</title>
+    <title>JavaEE Bootstrap - github.com/diegonobre/javaee-bootstrap</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -45,7 +45,6 @@
           <a class="navbar-brand" href="#">JavaEE Bootstrap</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <% User user = (User) session.getAttribute("user"); %>
           <% if (session.getAttribute("user") == null) { %>
           <form class="navbar-form navbar-right" method="post" action="./login">
             <div class="form-group">
@@ -57,6 +56,7 @@
             <button type="submit" class="btn btn-success">Entrar</button>
           </form>
           <% } else { %>
+            <% User user = (User) session.getAttribute("user"); %>
           	<div id="login_details" class="navbar-right">
           		<button type="submit" class="btn btn-primary"><%=user.getNome() + ", " +user.getEmail() %></button>
           		<a class="btn btn-danger" href="./logout">Sair</a>
@@ -88,7 +88,7 @@ out.println(texto + (valor1 + valor2));
 
 <%=texto + (valor1 + valor2) %>
 </pre>
-		<p>Para conhecer mais sobre JSP visite o arquivo <a href="./objetos.jsp" target="_blank" class="btn btn-primary btn-lg" role="button">objetos.jsp &raquo;</a></p>
+		<p>Para conhecer mais sobre JSP visite o arquivo <a href="./objetos.jsp" target="_blank" class="btn btn-primary btn-lg">objetos.jsp &raquo;</a></p>
       </div>
     </div>
 
@@ -96,19 +96,19 @@ out.println(texto + (valor1 + valor2));
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-4">
-          <h2>Primeiros passos com JSTL</h2>
-          <p>Conheça as tags JSTL</p>
-          <jsp:useBean id="userJstl" class="com.github.diegonobre.javaee.dto.User"></jsp:useBean>
-          <p>Olá jsp:useBean: <jsp:getProperty property="nome" name="userJstl" /> </p>
+          <h2>Primeiros passos com jsp:useBean</h2>
+          <p>Conheça as tags jsp:useBean</p>
+          <jsp:useBean id="usuario" class="com.github.diegonobre.javaee.dto.User"></jsp:useBean>
+          <p>Olá jsp:useBean: <jsp:getProperty property="nome" name="usuario" /> </p>
           <p><a class="btn btn-default" href="#" role="button">Ler mais &raquo;</a></p>
         </div>
         <div class="col-md-4">
-          <h2>Heading</h2>
+          <h2>Primeiros passos com JSTL</h2>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
        </div>
         <div class="col-md-4">
-          <h2>Heading</h2>
+          <h2>Primeiros passos com JSF</h2>
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div>

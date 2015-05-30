@@ -7,18 +7,17 @@
 <title><%= getServletConfig().getInitParameter("ds_titulo") %></title>
 </head>
 <%!
-public void jspInit() {
-	String ds_titulo = getServletConfig().getInitParameter("ds_titulo");
-	ServletContext context = getServletContext();
-	context.setAttribute("ds_titulo", ds_titulo);
-}
+	public void jspInit() {
+		String ds_titulo = getServletConfig().getInitParameter("ds_titulo");
+		getServletContext().setAttribute("ds_titulo", ds_titulo);
+	}
 %>
 
 <body>
 <h3>Olhe para o título da página \o</h3>
 <p>O texto foi configurado no arquivo web.xml</p>
 <h3>Sobrescrevendo a função jspInit(), adicionamos um atributo ao ServletContext usando setAttribute(parametro, valor);</h3>
-<p>No ServletContext o valor é: <%=getServletContext().getAttribute("ds_titulo") %></p>
+<p>No ServletContext o valor é: <%= getServletContext().getAttribute("ds_titulo") %></p>
 <p>url: /WebContent/WEB-INF/web.xml</p>
 </body>
 </html>

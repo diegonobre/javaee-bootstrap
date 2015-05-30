@@ -54,7 +54,7 @@ public class OlaServlet extends HttpServlet {
 		out.println("Olá Mundo Servlet! Aprendi a escrever o seu email (request): " + email);
 		out.println("Olá Mundo Servlet! Aprendi a escrever o seu email (session): " + (String) session.getAttribute("emailSession") );
 		out.println("Olá Mundo Servlet! Aprendi a escrever o seu email (context): " + (String) context.getAttribute("emailSession") );
-		out.println("Olá Mundo Servlet! Aprendi a escrever o seu email (context): " + (String) this.getServletConfig().getInitParameter("versao") );
+		out.println("Olá Mundo Servlet! Aprendi a escrever um parâmetro do servletConfig: " + (String) this.getServletConfig().getInitParameter("versao") );
 	}
 
 	/**

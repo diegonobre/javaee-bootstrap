@@ -16,17 +16,17 @@ Essa página foi criada para testar passagem de parâmetros armazenando valores em
 String email = request.getParameter("email");
 
 if (email != null) {
+	pageContext.setAttribute("emailContext", email);
 	session.setAttribute("emailSession", email);
 	application.setAttribute("emailApplication", email);
-	pageContext.setAttribute("emailContext", email);
 }
 %>
 <br />
-E-mail no objeto sessão é: <%= session.getAttribute("emailSession") %>
+E-mail em pageContext é: <%= pageContext.getAttribute("emailContext") %>
 <br />
-E-mail no objeto application é: <%= application.getAttribute("emailApplication") %>
+E-mail em session é: <%= session.getAttribute("emailSession") %>
 <br />
-E-mail no objeto pageContext é: <%= pageContext.getAttribute("emailContext") %>
+E-mail em application é: <%= application.getAttribute("emailApplication") %>
 <br />
 </body>
 </html>
