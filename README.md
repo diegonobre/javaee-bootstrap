@@ -5,8 +5,8 @@ Projeto Java EE, JSP, Servlet, Hibernate, JPA utilizando Bootstrap como inteface
   * [x] HTTP
   * [x] Servlets
   * [x] Java Server Pages (JSP)
-  * [ ] JSTL e Bibliotecas de tags
+  * [x] JSTL e Bibliotecas de tags
+  * [ ] Bancos de Dados
   * [ ] Listeners de Eventos
   * [ ] Filtros em aplicações Web
-  * [ ] Bancos de dados em Java
   * [ ] Java Server Faces (JSF)
