@@ -2,7 +2,7 @@ package com.github.diegonobre.javaee.service;
 
 import java.util.HashMap;
 
-import com.github.diegonobre.javaee.dto.User;
+import com.github.diegonobre.javaee.dto.Usuario;
 
 public class LoginService {
 	
@@ -23,8 +23,8 @@ public class LoginService {
 		return true;
 	}
 	
-	public User getUserDetails(String email) {
-		User user = new User(); 
+	public Usuario getUserDetails(String email) {
+		Usuario user = new Usuario(); 
 		user.setNome(usuarios.get(email));
 		user.setEmail(email);
 		

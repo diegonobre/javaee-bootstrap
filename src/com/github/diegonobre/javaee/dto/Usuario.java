@@ -1,6 +1,6 @@
 package com.github.diegonobre.javaee.dto;
 
-public class User {
+public class Usuario {
 	
 	private String nome;
 	private String email;

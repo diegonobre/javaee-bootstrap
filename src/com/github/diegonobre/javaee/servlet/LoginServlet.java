@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.github.diegonobre.javaee.dto.User;
+import com.github.diegonobre.javaee.dto.Usuario;
 import com.github.diegonobre.javaee.service.LoginService;
 
 /**
@@ -34,8 +34,8 @@ public class LoginServlet extends HttpServlet {
 		boolean result = loginService.auth(email, senha);
 		
 		if (result) {
-			User user = loginService.getUserDetails(email);
-			session.setAttribute("user", user);
+			Usuario usuario = loginService.getUserDetails(email);
+			session.setAttribute("usuario", usuario);
 			
 			response.sendRedirect("index.jsp");
 			return;
