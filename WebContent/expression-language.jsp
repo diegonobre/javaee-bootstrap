@@ -13,13 +13,6 @@
 <pre>
 \${param.email} vai ser igual a: ${param.email}
 </pre>
-
-    <h3>jsp:UseBean</h3>
-    <p></p>
-    <jsp:useBean id="usuario" class="com.github.diegonobre.javaee.dto.Usuario" />
-
-${usuario.nome}
-
     </div>
   </div>
 

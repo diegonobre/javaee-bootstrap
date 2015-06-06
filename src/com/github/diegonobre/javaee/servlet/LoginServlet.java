@@ -4,12 +4,13 @@ import java.io.IOException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.github.diegonobre.javaee.dto.Usuario;
+import com.github.diegonobre.javaee.model.Usuario;
 import com.github.diegonobre.javaee.service.LoginService;
 
 /**
@@ -36,6 +37,10 @@ public class LoginServlet extends HttpServlet {
 		if (result) {
 			Usuario usuario = loginService.getUserDetails(email);
 			session.setAttribute("usuario", usuario);
+			
+			// armazenando também em um Cookie
+			Cookie cookie = new Cookie("meuPrimeiroCookie", "Esse valor está no Cookie");
+			response.addCookie(cookie);
 			
 			response.sendRedirect("index.jsp");
 			return;

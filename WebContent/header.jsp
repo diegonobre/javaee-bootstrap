@@ -1,4 +1,4 @@
-<%@ page import="com.github.diegonobre.javaee.dto.Usuario" %>
+<%@ page import="com.github.diegonobre.javaee.model.Usuario" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -48,7 +48,9 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="./escopos.jsp" style="color:white">Escopos</a></li>
+            <li class="active"><a href="./cookies.jsp" style="color:white">Cookies</a></li>
             <li class="active"><a href="./expression-language.jsp" style="color:white">Expression Language</a></li>
+            <li class="active"><a href="./dicionario-jstl.jsp" style="color:white">JSTL</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color:white">Usuários <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">

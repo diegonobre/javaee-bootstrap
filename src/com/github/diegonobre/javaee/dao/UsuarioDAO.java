@@ -3,7 +3,7 @@ package com.github.diegonobre.javaee.dao;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.github.diegonobre.javaee.dto.Usuario;
+import com.github.diegonobre.javaee.model.Usuario;
 
 public class UsuarioDAO {
 	

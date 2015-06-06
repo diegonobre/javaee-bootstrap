@@ -1,4 +1,4 @@
-package com.github.diegonobre.javaee.dto;
+package com.github.diegonobre.javaee.model;
 
 public class Usuario {
 	

@@ -2,7 +2,7 @@ package com.github.diegonobre.javaee.service;
 
 import java.util.HashMap;
 
-import com.github.diegonobre.javaee.dto.Usuario;
+import com.github.diegonobre.javaee.model.Usuario;
 
 public class LoginService {
 	
