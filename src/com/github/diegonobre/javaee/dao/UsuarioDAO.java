@@ -5,11 +5,11 @@ import java.util.List;
 
 import com.github.diegonobre.javaee.model.Usuario;
 
-public class UsuarioDAO {
+public class UsuarioDao {
 	
 	public List<Usuario> usuarios = new ArrayList<Usuario>();
 
-	public UsuarioDAO() {
+	public UsuarioDao() {
 		System.out.println("Instanciado UsuarioDAO");
 		
 		Usuario usuario = new Usuario();
