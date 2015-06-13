@@ -8,14 +8,23 @@ public class ConnectionFactory {
 
 	public Connection getConnection() {
 		try {
-			String url = "jdbc:postgresql://localhost:5432/gc";
+			Class.forName("org.postgresql.Driver");
+			
+			String banco = "gc";
 			String usuario = "gc";
 			String senha = "gc";
 			
-			return DriverManager.getConnection(url, usuario, senha);
+			String url = "jdbc:postgresql://localhost/"+banco+"?user="+usuario+"&password="+senha;
+			
+			return DriverManager.getConnection(url);
+			
+		} catch (ClassNotFoundException e) {
+			System.out.println(e.getMessage());
 		} catch (SQLException e) {
+			System.out.println(e.getMessage());
 			throw new RuntimeException();
 		}
+		return null;
 	}
 
 }

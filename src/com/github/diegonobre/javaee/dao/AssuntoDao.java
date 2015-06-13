@@ -58,7 +58,10 @@ public class AssuntoDao {
 			}
 			rs.close();
 			stmt.close();
+			
+			System.out.println("retornando assuntos...");
 			return assuntos;
+			
 		} catch (SQLException e) {
 			throw new RuntimeException();
 		}

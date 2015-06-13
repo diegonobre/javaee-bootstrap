@@ -4,7 +4,7 @@
     <div class="jumbotron">
 	     <div class="container">
 	     	<h2>Usuários</h2>
-	     	<jsp:useBean id="usuarioDAO" class="com.github.diegonobre.javaee.dao.UsuarioDAO"></jsp:useBean>
+	     	<jsp:useBean id="usuarioDAO" class="com.github.diegonobre.javaee.dao.UsuarioDao"></jsp:useBean>
 		      <!-- Example row of columns -->
 		      <div class="row">
 			      <c:forEach var="usuario" items="${usuarioDAO.todos}">

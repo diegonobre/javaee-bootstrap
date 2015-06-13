@@ -8,13 +8,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.github.diegonobre.javaee.dao.UsuarioDao;
+import com.github.diegonobre.javaee.dao.AssuntoDao;
+import com.github.diegonobre.javaee.model.Assunto;
 
 /**
- * Servlet implementation class UsuarioServlet
+ * Servlet implementation class AssuntoServlet
  */
-@WebServlet("/usuario")
-public class UsuarioServlet extends HttpServlet {
+@WebServlet("/assunto")
+public class AssuntoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -22,13 +23,20 @@ public class UsuarioServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String nome = request.getParameter("nome");
-		String email = request.getParameter("email");
+		String descricao = request.getParameter("descricao");
 		
-		UsuarioDao usuarioDAO = new UsuarioDao();
+		Assunto assunto = new Assunto();
+		assunto.setNome(nome);
+		assunto.setDescricao(descricao);
 		
-		//usuarioDAO.adicionar(nome, email);
+		AssuntoDao assuntoDao = new AssuntoDao();
+		try {
+			assuntoDao.salvar(assunto);
+			response.sendRedirect("./assuntos.jsp");
+		} catch (Exception e) {
+			response.sendRedirect("./erro.jsp");
+		}
 		
-		response.sendRedirect("./usuarios.jsp");
 	}
 
 }
