@@ -6,30 +6,30 @@ import java.util.List;
 
 
 /**
- * The persistent class for the assunto database table.
+ * The persistent class for the exame database table.
  * 
  */
 @Entity
-@NamedQuery(name="Assunto.findAll", query="SELECT a FROM Assunto a")
-public class Assunto implements Serializable {
+@NamedQuery(name="Exame.findAll", query="SELECT e FROM Exame e")
+public class Exame implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="sq_assunto", updatable=false)
+	@Column(name="sq_exame", updatable=false)
 	private Integer id;
-
-	@Column(name="ds_descricao")
-	private String descricao;
 
 	@Column(name="ds_nome")
 	private String nome;
 
+	@Column(name="sq_nivel")
+	private Integer sqNivel;
+
 	//bi-directional many-to-one association to ExameAssunto
-	@OneToMany(mappedBy="assunto")
+	@OneToMany(mappedBy="exame")
 	private List<ExameAssunto> exameAssuntos;
 
-	public Assunto() {
+	public Exame() {
 	}
 
 	public Integer getId() {
@@ -40,20 +40,20 @@ public class Assunto implements Serializable {
 		this.id = id;
 	}
 
-	public String getDescricao() {
-		return this.descricao;
-	}
-
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
-
 	public String getNome() {
 		return this.nome;
 	}
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public Integer getSqNivel() {
+		return this.sqNivel;
+	}
+
+	public void setSqNivel(Integer sqNivel) {
+		this.sqNivel = sqNivel;
 	}
 
 	public List<ExameAssunto> getExameAssuntos() {
@@ -66,14 +66,14 @@ public class Assunto implements Serializable {
 
 	public ExameAssunto addExameAssunto(ExameAssunto exameAssunto) {
 		getExameAssuntos().add(exameAssunto);
-		exameAssunto.setAssunto(this);
+		exameAssunto.setExame(this);
 
 		return exameAssunto;
 	}
 
 	public ExameAssunto removeExameAssunto(ExameAssunto exameAssunto) {
 		getExameAssuntos().remove(exameAssunto);
-		exameAssunto.setAssunto(null);
+		exameAssunto.setExame(null);
 
 		return exameAssunto;
 	}

@@ -4,6 +4,8 @@
 	<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 	<class>com.github.diegonobre.javaee.model.Assunto</class>
 	<class>com.github.diegonobre.javaee.model.NivelDificuldade</class>
+	<class>com.github.diegonobre.javaee.model.Exame</class>
+	<class>com.github.diegonobre.javaee.model.ExameAssunto</class>
       <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/gc" />
       <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />

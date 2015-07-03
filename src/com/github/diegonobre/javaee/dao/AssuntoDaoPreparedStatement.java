@@ -50,7 +50,7 @@ public class AssuntoDaoPreparedStatement {
 			
 			while (rs.next()) {
 				Assunto assunto = new Assunto();
-				assunto.setId(rs.getLong("sq_assunto"));
+//				assunto.setId(rs.getLong("sq_assunto"));
 				assunto.setNome(rs.getString("ds_nome"));
 				assunto.setDescricao(rs.getString("ds_descricao"));
 				
