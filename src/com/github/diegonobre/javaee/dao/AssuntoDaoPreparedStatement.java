@@ -10,11 +10,11 @@ import java.util.List;
 import com.github.diegonobre.javaee.jdbc.ConnectionFactory;
 import com.github.diegonobre.javaee.model.Assunto;
 
-public class AssuntoDao {
+public class AssuntoDaoPreparedStatement {
 
 	private Connection db;
 	
-	public AssuntoDao() {
+	public AssuntoDaoPreparedStatement() {
 		this.db = new ConnectionFactory().getConnection();
 	}
 	

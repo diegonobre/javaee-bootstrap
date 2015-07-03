@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.github.diegonobre.javaee.dao.AssuntoDao;
+import com.github.diegonobre.javaee.dao.AssuntoDaoPreparedStatement;
 import com.github.diegonobre.javaee.model.Assunto;
 
 /**
@@ -29,7 +29,7 @@ public class AssuntoServlet extends HttpServlet {
 		assunto.setNome(nome);
 		assunto.setDescricao(descricao);
 		
-		AssuntoDao assuntoDao = new AssuntoDao();
+		AssuntoDaoPreparedStatement assuntoDao = new AssuntoDaoPreparedStatement();
 		try {
 			assuntoDao.salvar(assunto);
 			response.sendRedirect("./assuntos.jsp");

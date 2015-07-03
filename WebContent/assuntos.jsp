@@ -3,7 +3,7 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
 	     <div class="container">
-	     	<jsp:useBean id="assuntoDao" class="com.github.diegonobre.javaee.dao.AssuntoDao"/>
+	     	<jsp:useBean id="assuntoDao" class="com.github.diegonobre.javaee.dao.AssuntoDaoPreparedStatement"/>
 	     	
 	     	<h2>Assuntos</h2>
 		      <div class="row">

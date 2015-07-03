@@ -1,4 +1,4 @@
-package br.com.linuxfi.dao;
+package com.github.diegonobre.javaee.dao;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -8,9 +8,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 
-import br.com.linuxfi.model.Assunto;
+import com.github.diegonobre.javaee.model.Assunto;
 
-public class AssuntoDao {
+public class AssuntoDaoJPA {
 
 	EntityManager em = Persistence.createEntityManagerFactory("jpacrud").createEntityManager();
 	
